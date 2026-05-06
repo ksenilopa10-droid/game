@@ -3,7 +3,7 @@ from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton, QLabel,
                              QVBoxLayout, QHBoxLayout, QRadioButton,
                              QGroupBox, QButtonGroup)
 from PyQt5.QtGui import QFont
-from random import shuffle, randint  # choice для случайного выбора вопроса
+from random import shuffle, randint  
 
 
 app = QApplication([])
@@ -14,15 +14,15 @@ font = QFont('Arial', 14)
 main_win.setFont(font)
 
 
-# ============ КЛАСС ДЛЯ ХРАНЕНИЯ ВОПРОСОВ ============
+
 class Question:
     def __init__(self, text, right_answer, wrong1, wrong2, wrong3):
-        self.text = text                # текст вопроса
-        self.right_answer = right_answer  # правильный ответ
-        self.wrong_answers = [wrong1, wrong2, wrong3]  # список неправильных ответов
+        self.text = text               
+        self.right_answer = right_answer  
+        self.wrong_answers = [wrong1, wrong2, wrong3]  
 
 
-# ============ СОЗДАНИЕ СПИСКА ВОПРОСОВ ============
+
 questions_list = [
     Question("Какой национальности не существует?",
              "Смурфы", "Энцы", "Чулымцы", "Алеуты"),
@@ -37,20 +37,20 @@ questions_list = [
 ]
 
 
-# ============ ПЕРЕМЕННЫЕ ДЛЯ СТАТИСТИКИ ============
-main_win.total = 0      # всего отвеченных вопросов
-main_win.count = 0       # количество правильных ответов
+
+main_win.total = 0      
+main_win.count = 0       
 
 
-# ============ СОЗДАНИЕ ВИДЖЕТОВ ============
-lb_Question = QLabel("")  # текст вопроса будет заполняться позже
+
+lb_Question = QLabel("")  
 
 
-# Группа для вариантов ответов
+
 RadioGroupBox = QGroupBox("Варианты ответов")
 
 
-# Переключатели
+
 rbtn_1 = QRadioButton("")
 rbtn_2 = QRadioButton("")
 rbtn_3 = QRadioButton("")
