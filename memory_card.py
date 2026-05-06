@@ -57,7 +57,7 @@ rbtn_3 = QRadioButton("")
 rbtn_4 = QRadioButton("")
 
 
-# Группа для объединения переключателей
+
 radio_group = QButtonGroup()
 radio_group.addButton(rbtn_1)
 radio_group.addButton(rbtn_2)
@@ -65,7 +65,7 @@ radio_group.addButton(rbtn_3)
 radio_group.addButton(rbtn_4)
 
 
-# Группа для отображения правильного ответа
+
 AnswerGroupBox = QGroupBox("Результат")
 lb_Result = QLabel("")
 lb_Correct = QLabel("")
